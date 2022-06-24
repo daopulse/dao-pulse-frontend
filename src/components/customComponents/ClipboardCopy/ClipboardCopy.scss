@@ -1,0 +1,9 @@
+.copied-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  white-space: nowrap;
+  background-color: $overlay-panel-bg;
+}

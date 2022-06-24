@@ -1,0 +1,54 @@
+// app global css in SCSS form
+@import "./fonts/fonts.css";
+@import "rebase";
+@import "placeholder";
+@import "sizing";
+@import "typo";
+@import "buttons";
+@import "overlay";
+@import "table";
+@import "card";
+@import "scrollbar";
+@import "form";
+@import "date";
+
+html {
+  font-family: $font-family-base;
+}
+
+body, body.body--dark  {
+  background: var(--page-background-color) !important;
+  color: var(--text-color);
+}
+
+#q-app {
+  background-image: var(--page-background-pattern), var(--body-background-image-top), var(--body-background-image-bottom);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-position: top left, top center, bottom center;
+  min-height: 100vh;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content, footer {
+  max-width: calc(#{$content-max-width} + 2 * #{$content-px-desktop});
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $content-px-desktop;
+  padding-right: $content-px-desktop;
+  width: 100%;
+}
+.content {
+  flex-grow: 1;
+}
+.screen--xs .content, .screen--xs footer {
+  padding-left: 0;
+  padding-right: 0;
+  width: calc(100vw - 2 * #{$content-px-mobile});
+}
+
+.no-margin {
+  margin: 0;
+}

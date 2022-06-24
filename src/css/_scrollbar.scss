@@ -1,0 +1,39 @@
+.scroll {
+  scrollbar-width: $scrollbar-width;
+  scrollbar-height: $scrollbar-height;
+  scrollbar-color: $scrollbar-thumb $scrollbar-bg;
+}
+.scroll::-webkit-scrollbar {
+  width:  $scrollbar-width;
+  height: $scrollbar-height;
+}
+.scroll::-webkit-scrollbar-track {
+  background: $scrollbar-bg;
+  border-radius: $scrollbar-border-radius;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb;
+  border-radius: $scrollbar-border-radius;
+  border: $scrollbar-border;
+}
+
+.mobile {
+  .scroll {
+    scrollbar-width: $scrollbar-width / 2;
+    scrollbar-height: $scrollbar-height / 2;
+    scrollbar-color: $scrollbar-thumb $scrollbar-bg;
+  }
+  .scroll::-webkit-scrollbar {
+    width:  $scrollbar-width / 2;
+    height: $scrollbar-height / 2;
+  }
+  .scroll::-webkit-scrollbar-track {
+    background: $scrollbar-bg;
+    border-radius: $scrollbar-border-radius / 2;
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb;
+    border-radius: $scrollbar-border-radius / 2;
+    border-width: $scrollbar-width;
+  }
+}

@@ -1,0 +1,72 @@
+.ui-dd-menu {
+  @extend %overlay-base;
+  @extend %overlay-base-padding;
+  transform: translateY(4px);
+  width: 580px;
+  align-items: flex-start;
+
+  .dd-menu-divider {
+    margin: 0.75rem -0.75rem;
+    border-bottom: 1px solid var(--q-dark5);
+    align-self: stretch;
+  }
+}
+.dd-menu-header {
+  color: $text-muted;
+  font-weight: 700;
+  width: 100%;
+}
+
+.dd-menu-divider {
+  border-bottom: 1px solid var(--q-dark5);
+  align-self: stretch;
+}
+
+.ui-dd-menu-list {
+  @extend %overlay-base;
+  @extend %overlay-base-padding;
+  transform: translateY(4px);
+  padding-left: 0;
+  padding-right: 0;
+
+  .dd-menu-header, .dd-menu-list-item, .dd-menu-content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .dd-menu-list-item-collapse {
+    padding: 0.75rem;
+  }
+
+  .dd-menu-divider {
+    margin: 0.5rem 0;
+  }
+}
+.dd-menu-list-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+
+  &:hover, &.active  {
+    background: var(--q-dark4);
+  }
+}
+
+.ui-select-options {
+  @extend %overlay-base;
+}
+
+.q-menu {
+  @extend %overlay-base;
+  .q-item:hover {
+    background: var(--q-dark4);
+  }
+}
+
+.q-tooltip {
+  max-height: unset;
+  max-width: 225px !important;
+  border: $tooltip-border;
+  box-shadow: $shadow;
+  line-height: 20px;
+}

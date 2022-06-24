@@ -1,0 +1,31 @@
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.news-list {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  body.screen--xs & {
+    margin-right: calc(-#{$content-px-mobile});
+    padding-right: $content-px-mobile;
+    @extend .unselectable;
+  }
+  body.screen--sm & {
+    margin-right: calc(-#{$content-px-tablet});
+    padding-right: $content-px-tablet;
+    @extend .unselectable;
+  }
+}
+
+.news-list-fixed {
+
+}
+

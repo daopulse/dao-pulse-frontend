@@ -1,0 +1,20 @@
+header {
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--header-border-color);
+  margin: 0 0 40px 0;
+}
+.screen--sm header {
+  margin: 0 0 40px 0;
+  padding-left: $content-px-desktop;
+  padding-right: $content-px-desktop;
+}
+
+.screen--xs header {
+  margin: 0 0 32px 0;
+  padding-left: $content-px-mobile;
+  padding-right: $content-px-mobile;
+
+}

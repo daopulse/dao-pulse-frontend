@@ -1,0 +1,18 @@
+// Block half with gutter
+$gutters: ('2': '8', '3': '12', '4': '16', '5': '20', '6': '24');
+
+@each $gutter, $value in $gutters {
+  .half-gutter-#{$gutter} {
+    width: calc(50% - #{$value}px / 2);
+    &:first-of-type {
+      margin-right: calc(#{$value}px / 2);
+    }
+    &:last-of-type {
+      margin-left:calc(#{$value}px / 2);
+    }
+  }
+}
+
+.w-full {
+  width: 100%;
+}

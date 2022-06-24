@@ -1,0 +1,24 @@
+.ui-tag {
+  height: 1.25rem;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  line-height: 1.3;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  background: $tag-base-bg;
+  color: var(--text-color);
+
+  &.clickable:not(.disabled) {
+    &:hover, &:focus, &:active {
+      background: $tag-base-hover-bg;
+      color: $tag-base-hover-color;
+    }
+    &.disabled {
+      color: $tag-base-disabled-color;
+    }
+  }
+}
+

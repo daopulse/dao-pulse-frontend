@@ -1,0 +1,35 @@
+.ui-card {
+  background: $card-bg;
+  border: $card-border;
+  border-radius: $border-radius;
+  backdrop-filter: $glass-filter;
+  display: flex;
+  flex-direction: column;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.card-chart {
+  padding: 12px 12px 24px 12px;
+
+  .card-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .chart-stats, .chart-controller {
+      margin-top: 12px;
+    }
+  }
+}
+.card-chart.card-expanded {
+  width: 100%;
+}
+.card-chart.card-collapsed {
+}

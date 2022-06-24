@@ -1,0 +1,49 @@
+.ui-chip {
+  height: $control-height-xs;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  margin: 2px;
+
+  .q-chip__icon--remove {
+    margin-left: 0.25rem;
+  }
+}
+
+.chip-primary {
+  background: $primary-gradient;
+  &:hover {
+    opacity: 0.8;
+  }
+  &[disabled] {
+    color: var(--light-40);
+  }
+}
+
+.chip-base {
+  background: $chip-base-bg;
+  color: $chip-base-color;
+  &:hover {
+    background: $chip-base-hover-bg;
+  }
+}
+
+.chip-sm {
+  height: $control-height-xxs;
+  font-size: $font-size-xs;
+  line-height: 1;
+  padding: 0.12rem 0.5rem;
+  .q-chip__icon--remove {
+    font-size: 0.5rem;
+    margin-right: -0.25rem;
+    border-radius: 50%;
+    background-color: var(--q-primary);
+    color: var(--text-color);
+    opacity: 1;
+  }
+}
+.ui-select .q-chip {
+  @extend .ui-chip;
+  @extend .chip-sm;
+  @extend .chip-base;
+}

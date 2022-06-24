@@ -1,0 +1,153 @@
+.text-gradient {
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  text-shadow: 0 0 transparent;
+}
+.text-muted {
+  opacity: 1;
+  color: $text-muted;
+}
+.text-light {
+  opacity: 1;
+  color: $text-light;
+}
+.fs-sm {
+  font-size: $font-size-sm !important;
+}
+.fs-xs {
+  font-size: $font-size-xs !important;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.h1, h1 {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: unset;
+  font-weight: 400;
+}
+.h2, h2 {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.h3, h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.h4, h4 {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.002em;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+}
+.caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: unset;
+  font-weight: 400;
+}
+.caption-bold {
+  @extend .caption;
+  font-weight: 700;
+}
+
+.text-base {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+.text-lg {
+  font-weight: 400;
+  font-size: $font-size-lg;
+  line-height: 1.38;
+}
+
+.text-link {
+  cursor: pointer;
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+  &[disabled], &.disabled {
+    opacity: 0.4;
+  }
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.clickable:not([disabled]) {
+  cursor: pointer;
+}
+
+.text-markdown {
+  overflow-wrap: break-word;
+  h1, h2, h3, h4, {
+    @extend .h4;
+    color: $text-color;
+  }
+  a {
+    @extend .text-link;
+    color: $primary;
+  }
+  em {
+    font-style: normal !important;
+  }
+}
+.screen--sm {
+  .h4, h4 {
+    line-height: 1.38;
+  }
+}
+
+.screen--xs {
+  .h1, h1 {
+    font-size: 28px;
+    line-height: 1.29;
+    letter-spacing: unset;
+  }
+  .h2, h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: unset;
+  }
+  .h3, h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: unset;
+  }
+  .h4, h3 {
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: 0.002em;
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: 0.1px;
+  }
+  .text-base {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+  .text-lg {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+}

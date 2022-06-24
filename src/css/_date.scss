@@ -1,0 +1,49 @@
+.ui-date {
+  background: $overlay-panel-bg;
+  color: $overlay-panel-color;
+  border: 1px solid $overlay-panel-border;
+  box-shadow: $shadow;
+
+  .q-date__header {
+    background: $date-header-bg;
+    padding: 16px 24px;
+  }
+  .q-date__header-subtitle {
+    font-size: 1rem;
+    line-height: 1.38;
+    letter-spacing: unset;
+    color: $text-light;
+    margin-bottom: 0.25rem;
+  }
+  .q-date__header-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+  }
+
+  .q-date__view {
+    padding: 16px 24px;
+    min-height: unset;
+  }
+  .q-date__calendar-weekdays > div {
+    opacity: 1;
+    color: $weekliday-color;
+    font-size: 12px;
+  }
+  .q-date__calendar-item {
+    height: 32px !important;
+
+    .q-btn-item.non-selectable {
+      color: $text-light;
+    }
+  }
+  .q-date__calendar-days-container {
+    min-height: unset;
+  }
+}
+
+.ui-dd-date {
+  background: unset;
+  transform: translateY(4px);
+}

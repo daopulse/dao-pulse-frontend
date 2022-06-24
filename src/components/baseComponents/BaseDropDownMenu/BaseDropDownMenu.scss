@@ -1,0 +1,22 @@
+.ui-dd-menu-area {
+  position: relative;
+  max-height: 80vh;
+}
+.ui-dd-menu-list {
+  position: absolute;
+  min-width: 200px;
+  z-index: 99;
+  max-height: 60vh;
+  overflow-y: auto;
+  &.menu-list-left {
+    left: 0;
+  }
+  &.menu-list-right {
+    right: 0;
+  }
+}
+.screen--xs .ui-dd-menu-area .ui-dd-menu-list {
+  right: 0;
+  left: 0;
+  width: unset !important;
+}

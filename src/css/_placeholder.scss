@@ -1,0 +1,37 @@
+%button {
+  height: $control-height;
+  border-radius: $border-radius;
+  color: var(--text-color);
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 1.25rem;
+  min-height: unset;
+
+  &[disabled] {
+    opacity: 1 !important;
+    color: var(--text-muted-color);
+  }
+}
+
+%input {
+  height: $control-height-sm;
+  background: var(--dark3);
+  border: 1px solid var(--dark5);
+  border-radius: $border-radius;
+}
+
+%overlay-base {
+  display: flex;
+  flex-direction: column;
+  background-color: $overlay-panel-bg;
+  border: $overlay-panel-border;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  max-width: calc(100vw - #{$content-px-mobile} * 2);
+}
+
+%overlay-base-padding {
+  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+}

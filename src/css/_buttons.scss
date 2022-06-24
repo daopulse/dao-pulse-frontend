@@ -1,0 +1,106 @@
+.ui-button {
+  @extend %button !optional;
+}
+
+.button-base {
+  background: $button-base-bg;
+  &:not([disabled]) {
+    &:hover, &:active, &:focus {
+      background: $button-base-hover-bg;
+      color: $button-base-hover-color;
+    }
+  }
+}
+
+.button-primary {
+  background: $button-primary-bg;
+  &:not([disabled]) {
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+.button-sm {
+  height: $control-height-sm;
+  font-size: $font-size-xs;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 0.4rem 1rem;
+}
+
+.button-icon {
+  aspect-ratio: 1/1;
+  padding: unset;
+}
+
+.button-text {
+  border-radius: 0;
+  background: none !important;
+  &:before, .q-focus-helper {
+    opacity: 0 !important;
+  }
+}
+.button-text.q-btn--active {
+  background: none;
+}
+.q-btn .q-icon {
+  font-size: 1rem;
+  transform-origin: center;
+}
+
+.ui-dd-button {
+  @extend %button;
+  &:hover, &:active, &:focus {
+    color: $button-base-hover-color;
+    .q-focus-helper {
+      background: none !important;
+    }
+  }
+}
+
+.ui-dd-menu-btn {
+  @extend %button;
+  @extend .button-base;
+}
+
+.button-tumbler {
+  height: $control-height-xs;
+  font-size: $font-size-sm;
+  line-height: 1;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  &:not([disabled]):not(.button-tumbler-active):hover {
+    background: $button-base-hover-bg;
+  }
+  &.button-tumbler-active {
+    @extend .button-primary;
+  }
+}
+.button-tumbler-group {
+  background: $button-base-bg;
+  border-radius: $border-radius;
+  padding: 2px;
+}
+
+.button-no-format {
+  text-transform: inherit;
+  margin: inherit;
+  padding: 0;
+  color: inherit;
+  background: inherit;
+  height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border-radius: inherit;
+}
+
+.button-link {
+  @extend .button-no-format;
+  .block {
+    @extend .text-link
+  }
+}

@@ -1,0 +1,28 @@
+.about-wrapper {
+  .h2 {
+    display: flex;
+    flex-grow: 1;
+    align-self: center;
+  }
+  .profile-link a {
+    display: inline-flex;
+    align-items: center;
+    .q-icon {
+      opacity: 0.6;
+    }
+    &:hover {
+      .q-icon {
+        opacity: 1;
+      }
+      .text-lg {
+        text-decoration: underline;
+      }
+    }
+  }
+  .row-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    order: 4;
+  }
+}

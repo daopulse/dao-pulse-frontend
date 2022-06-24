@@ -1,0 +1,30 @@
+.ui-token-group {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+  overflow: hidden;
+}
+.token-group-item {
+  cursor: pointer;
+  &:not(:first-of-type) {
+    margin-left: -5px;
+  }
+  &:hover {
+    z-index: 90;
+  }
+}
+.token-group-item-xl + .token-group-item-xl {
+  margin-left: -12px;
+  z-index: 90;
+  cursor: auto;
+}
+.counter-plus-xl {
+  margin-left: -12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--q-light-20);
+  background-color: var(--q-light-10);
+}

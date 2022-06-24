@@ -1,0 +1,55 @@
+.ui-toggle {
+  .q-toggle__inner {
+    width: 3rem;
+    min-width: 3rem;
+    height: $toggle-height;
+    font-size: 18px;
+    padding: 0;
+  }
+  .q-toggle__track {
+    width: 3rem;
+    height: $toggle-height;
+    border-radius: $generic-border-radius;
+    opacity: 1;
+    background: $toggle-track-bg;
+  }
+  .q-toggle__thumb {
+    top: 3px;
+    left: 4px;
+    width: 1em;
+    height: 1em;
+    transition: left 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-user-select: none;
+    user-select: none;
+    color: $toggle-color;
+    z-index: 0;
+    box-shadow: none;
+  }
+  .q-toggle__inner--truthy .q-toggle__thumb {
+    left: 27px;
+  }
+  .q-toggle__thumb:before {
+    opacity: .15 !important;
+  }
+  .q-toggle__thumb:after {
+    box-shadow: $shadow-xs;
+    background: $toggle-color !important;
+  }
+  .q-toggle__inner--truthy {
+    .q-toggle__track {
+      background: $toggle-checked-track-bg;
+    }
+    .q-toggle__thumb:after {
+      background: $toggle-checked-color !important;
+    }
+  }
+
+}
+.q-toggle.toggle-labeled .q-toggle__inner + .q-toggle__label {
+  margin-left: 0.75rem;
+}
+
+.q-toggle.reverse.toggle-labeled .q-toggle__inner + .q-toggle__label {
+  margin-right: 0.75rem;
+}
+

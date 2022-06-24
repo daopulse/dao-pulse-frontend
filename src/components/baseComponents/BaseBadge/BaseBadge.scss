@@ -1,0 +1,56 @@
+.ui-badge {
+  height: 1.5rem;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+}
+.badge-sm {
+  height: 1rem;
+  font-weight: 400;
+  padding: 0 0.25rem;
+  border-radius: $border-radius-xs;
+}
+.badge-positive {
+  background: var(--q-positive-15);
+  color: var(--q-positive);
+}
+
+.badge-negative {
+  background: var(--q-negative-15);
+  color: var(--q-negative);
+}
+
+.badge-info {
+  background: var(--primary-gradient-10);
+  color: var(--q-primary);
+}
+
+.badge-base {
+  background: var(--q-light-10);
+  color: var(--text-color);
+}
+
+.badge-base-light {
+  background: var(--q-light-10);
+  color: var(--text-muted-color);
+}
+
+.badge-outlined {
+  background: transparent;
+  border: 1px solid $text-muted;
+  color: $text-muted;
+}
+.q-badge--floating {
+  height: 1rem;
+  padding: 0 0.25rem;
+  border-radius: $border-radius-sm / 2;
+  font-weight: 400;
+  color: $text-muted;
+  background: var(--gray-dark);
+  top: -4px;
+}

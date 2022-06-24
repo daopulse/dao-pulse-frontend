@@ -1,0 +1,20 @@
+.ui-table-skeleton {
+  .q-skeleton--dark {
+    background: var(--sceleton-gradient);
+  }
+  .q-skeleton--type-text {
+    transform: none;
+    height: $skeleton-text-height;
+  }
+  th .q-skeleton--type-text {
+    height: $skeleton-text-height-sm;
+  }
+  th:first-of-type,
+  td:first-of-type {
+    padding-right: 50px;
+    min-width: 200px;
+  }
+  td:first-of-type .q-skeleton--type-text {
+    height: $skeleton-text-height-lg;
+  }
+}

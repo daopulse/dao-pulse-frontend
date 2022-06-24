@@ -1,0 +1,25 @@
+.icon-control {
+  height: 24px;
+  width: 24px;
+  border-radius: $border-radius-sm;
+  padding: unset;
+  color: var(--text-color);
+  cursor: pointer;
+
+  &:not(.no-hover):hover {
+    background: var(--q-light-5);
+  }
+  &:not(.no-hover):active, &:not(.no-hover):focus {
+    background: var(--q-light-10);
+  }
+  .eva {
+    font-size: 1rem;
+  }
+
+  &.no-hover {
+    .eva {
+      font-size: 1.5rem;
+      color: $text-muted;
+    }
+  }
+}

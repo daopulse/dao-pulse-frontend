@@ -1,0 +1,7 @@
+.section {
+  margin-top: 3rem;
+  &:first-of-type {
+    margin-top: unset;
+  }
+}
+

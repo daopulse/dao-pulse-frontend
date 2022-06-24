@@ -1,0 +1,12 @@
+.dao-table-filter-form {
+  display: flex;
+
+  .form-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .dd-menu-list-item {
+    display: flex;
+    align-items: center;
+  }
+}

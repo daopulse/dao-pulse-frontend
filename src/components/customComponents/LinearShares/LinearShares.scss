@@ -1,0 +1,61 @@
+%share-line {
+  height: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  background-position: right center;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 1;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+.card-shares {
+  background: var(--q-light-3);
+  border-radius: $border-radius;
+  padding: 12px;
+}
+.share-label {
+  margin-top: 8px;
+}
+.share-line-base {
+  @extend %share-line;
+  flex-grow: 1;
+  margin-left: 1px;
+  background: $share-line-color;
+  border-radius: 0 $border-radius-xs $border-radius-xs 0;
+}
+.share-primary {
+  .share-line-color {
+    @extend %share-line;
+    border-radius: $border-radius-xs 0 0 $border-radius-xs;
+    &:before {
+      background: var(--primary-gradient-start-color);
+    }
+  }
+  .share-label {
+    color: $share-primary-text-color;
+  }
+}
+.share-secondary {
+  .share-line-color {
+    @extend %share-line;
+    border-radius: $border-radius-xs 0 0 $border-radius-xs;
+    &:before {
+      background: var(--secondary-gradient-start-color);
+    }
+  }
+  .share-label {
+    color: $share-secondary-text-color;
+  }
+}
+
+.share + .share {
+  margin-top: 12px;
+}
+

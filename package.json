@@ -1,0 +1,58 @@
+{
+  "name": "dao-pulse-frontend",
+  "version": "1.0.0",
+  "description": "DAO Pulse",
+  "productName": "DAO Pulse",
+  "author": "Andrew Smirnov <andrei.smirnov@firmshift.com>",
+  "license" : "GPL-3.0-or-later",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "@types/resize-observer-browser": "^0.1.7",
+    "@types/yup": "^0.29.13",
+    "axios": "^0.22",
+    "core-js": "^3.6.5",
+    "lightweight-charts": "^3.8.0",
+    "lodash": "^4.17.21",
+    "marked": "^4.0.14",
+    "moment": "^2.29.1",
+    "quasar": "^2.0.0",
+    "vee-validate": "^4.5.8",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@quasar/app": "^3.0.0",
+    "@types/node": "^12.20.52",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.4"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 16.14.0",
+    "npm": ">= 8.3.2",
+    "yarn": ">= 1.21.1"
+  }
+}

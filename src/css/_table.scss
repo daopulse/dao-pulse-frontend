@@ -1,0 +1,59 @@
+.ui-table {
+  border-radius: $border-radius;
+  border: $table-border;
+  box-shadow: $shadow-glass;
+  backdrop-filter: $glass-filter;
+  background: $table-bg;
+
+  .q-table {
+    td {
+      overflow-x: visible !important;
+    }
+    tbody tr:hover td {
+      background-color: var(--q-dark1);
+    }
+    .q-checkbox {
+      width: 1rem;
+      height: 1rem;
+      .q-checkbox__inner {
+        font-size: 1rem;
+        color: $text-muted;
+      }
+    }
+
+    tr.selected {
+      th, td {
+        background-color: $table-selected-bg;
+      }
+      .q-checkbox__inner {
+        color: var(--q-warning);
+      }
+    }
+
+    th, td {
+      //max-width: 240px;
+      overflow-x: hidden;
+    }
+
+    th {
+      color: $text-muted;
+      font-size: $font-size-sm;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tbody td {
+      font-size: $font-size-base;
+      text-align: right;
+    }
+  }
+}
+.ui-table-sticky-column {
+  th:nth-of-type(1),
+  td:nth-of-type(1), {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: $table-bg;
+  }
+}

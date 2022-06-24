@@ -1,0 +1,62 @@
+.ui-input {
+  .q-field__control {
+    color: transparent;
+    height: $control-height-sm;
+    background: var(--q-dark3);
+    &:before {
+      border-color: var(--q-dark5);
+    }
+    &:hover:before {
+      border-color: var(--q-dark5);
+    }
+  }
+}
+
+.ui-search-input, .ui-subscribe-input {
+  .q-field__control {
+    color: transparent;
+    height: $control-height;
+    padding: 0 0.5rem;
+    border-radius: $border-radius;
+    background: var(--q-light-5);
+    font-weight: 400;
+    font-size: $font-size-sm;
+
+    &:before {
+      border-color: transparent;
+    }
+    &:hover:before {
+      background: var(--q-light-10);
+      border-color: transparent;
+    }
+  }
+  &.q-field--highlighted .q-field__control:hover:before,
+  &.q-field--highlighted .q-field__control:before {
+    border-color: var(--q-light-10);
+    color: var(--text-color);
+  }
+
+  .q-field__marginal {
+    font-size: $font-size-base;
+  }
+  .q-field__control-container {
+    height: unset;
+  }
+}
+.ui-subscribe-input {
+  padding-bottom: 0;
+  .q-field__control {
+    padding: 0 0.75rem;
+    min-width: 355px;
+  }
+}
+.screen--xs .ui-subscribe-input .q-field__control {
+  min-width: 100%;
+}
+.screen--sm .ui-subscribe-input .q-field__control {
+  min-width: 300px;
+}
+
+.ui-search-input.input-sm .q-field__control {
+  height: $control-height-sm;
+}
