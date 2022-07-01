@@ -101,7 +101,8 @@ export const columns: TableColumn[] = [
     field: (val: DaoItem) => getDataForCell(
       getConvertedNumber(val.tokenPrice && {
         number: val.tokenPrice.amount,
-        currency: val.tokenPrice.tokenPairedSymbol
+        currency: val.tokenPrice.tokenPairedSymbol,
+        toSignificantDigit: true
       })
     ),
     sortable: true,
