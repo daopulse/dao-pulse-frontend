@@ -6,20 +6,25 @@ export type ConvertedOptions = {
   currency?: string;
   fractionDigits?: number;
   style?: 'decimal' | 'currency' | 'percent';
-  hasSign?: boolean
+  hasSign?: boolean,
+  toSignificantDigit?: boolean
 };
 
 export const getConvertedNumber = (options?: ConvertedOptions): string | undefined => {
   try {
     if (!options) return;
 
-    const { number, currency, fractionDigits, style, hasSign } = options;
+    const { number, currency, fractionDigits, style, hasSign, toSignificantDigit } = options;
 
     if (typeof number !== 'number') return;
 
+    const maxFraction = (toSignificantDigit && number < 1)
+      ? 1-Math.floor(Math.log(number)/Math.log(10))
+      : (isNotData(fractionDigits) ? defaultFractionDigits : fractionDigits);
+
     let converted = new Intl.NumberFormat('en-US', {
       notation: 'compact',
-      maximumFractionDigits: isNotData(fractionDigits) ? defaultFractionDigits : fractionDigits,
+      maximumFractionDigits: maxFraction,
       style: style || (currency ? 'currency' : 'decimal'),
       currency: currency || undefined
     }).format((style === 'percent') ? (number / 100) : number);
