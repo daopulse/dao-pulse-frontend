@@ -4,7 +4,7 @@
   "description": "DAO Pulse",
   "productName": "DAO Pulse",
   "author": "Andrew Smirnov <andrei.smirnov@firmshift.com>",
-  "license" : "GPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",

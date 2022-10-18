@@ -14,6 +14,11 @@ export const getSort = (items: DaoItem[], pag: Paginator): DaoItem[] => {
     let valueA = getDataByArrOfFields(a, filedToData!);
     let valueB = getDataByArrOfFields(b, filedToData!);
 
+    if(pag.sortBy === ColumnNames.RANK) {
+      if(isNumber(valueA) && !isNumber(valueB)) return 1;
+      if(!isNumber(valueA) && isNumber(valueB)) return -1;
+    }
+
     if (isNotData(valueA) && !isNotData(valueB)) return 1;
     if (!isNotData(valueA) && isNotData(valueB)) return -1;
     if (isNotData(valueA) && isNotData(valueB)) return 0;
@@ -30,6 +35,7 @@ export const getSort = (items: DaoItem[], pag: Paginator): DaoItem[] => {
 
     const sortedValueA = isNumber(valueA) ? valueA : ((valueA as string)?.toString() || '').toLowerCase();
     const sortedValueB = isNumber(valueB) ? valueB : ((valueB as string)?.toString() || '').toLowerCase();
+
 
     if (isNumber(sortedValueA) ? (sortedValueA > sortedValueB) : (sortedValueA < sortedValueB)) {
       return -1;
